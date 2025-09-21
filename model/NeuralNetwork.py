@@ -7,6 +7,15 @@ class NeuralNetwork:
 
     # 初始化神经网络
     def __init__(self, input_nodes, hidden_nodes, output_nodes, learning_rate):
+        """
+        初始化神经网络
+
+        参数:
+        input_nodes (int): 输入层节点数量
+        hidden_nodes (int): 隐藏层节点数量
+        output_nodes (int): 输出层节点数量
+        learning_rate (float): 学习率，控制权重更新的步长
+        """
         self.input_nodes = input_nodes
         self.hidden_nodes = hidden_nodes
         self.output_nodes = output_nodes

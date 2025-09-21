@@ -3,6 +3,23 @@
 ## 项目概述
 该项目实现了一个基于神经网络的MNIST手写数字识别系统，支持模型训练、测试以及学习率参数优化。项目使用numpy进行矩阵运算，通过反向传播算法训练神经网络，并能保存/加载模型权重以复用训练成果。
 
+## 神经网络模型架构
+本项目实现了一个具有一个隐藏层的前馈神经网络（Feedforward Neural Network），也称为多层感知机（Multilayer Perceptron, MLP）。
+
+### 模型结构
+这是一个经典的三层神经网络结构：输入层、隐藏层和输出层。
+
+<div align="center">
+  <img src="result/neural_network_structure.png" alt="神经网络模型图" width="600">
+</div>
+
+**模型特点：**
+- **输入层**：784个节点（对应28×28像素的MNIST图像）
+- **隐藏层**：500个节点（可调节）
+- **输出层**：10个节点（对应0-9数字分类）
+- **激活函数**：使用Sigmoid函数进行非线性变换
+- **训练算法**：反向传播算法（Backpropagation）
+
 ## 项目结构
 ```plainText
 PythonProject/
@@ -69,6 +86,10 @@ nn.load_weights('models/my_model_wih.npy', 'models/my_model_who.npy')
 
 ## 实验结果
 项目包含学习率搜索功能，可自动测试不同学习率对应的模型准确率。典型学习率测试范围为0.001至0.2，测试结果将显示各学习率对应的准确率并标记最佳结果。
+
+<div align="center">
+  <img src="result/accuracy.png" alt="准确率实验结果" width="600">
+</div>
 
 ## 代码示例
 ### 创建神经网络并训练

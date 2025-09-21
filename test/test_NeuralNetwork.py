@@ -15,7 +15,7 @@ MODEL_DIR = '../models'
 learning_rate = 0.1
 
 # 训练，若不需要训练，可注释下行
-train_neural_network(input_nodes, hidden_nodes, output_nodes, learning_rate,'nn_weights')
+train_neural_network(input_nodes, hidden_nodes, output_nodes, learning_rate, 'nn_weights')
 
 def test_neural_network():
     # 实例化一个网络（参数必须与训练时一致）
@@ -145,6 +145,7 @@ def run_experiments():
     for lr, acc in sorted_results:
         print(
             f"学习率: {lr:<6}, 正确率: {acc:.4f}{' <--- NEW BEST' if acc == sorted_results[0][1] and lr in LEARNING_RATES_TO_TEST else ''}")
+
 
 # 运行实验
 # run_experiments()
