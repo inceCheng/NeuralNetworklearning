@@ -30,6 +30,7 @@ class NeuralNetwork:
         # 输入层到隐藏层的权重
         # pow() 方法返回 x^y（x 的 y 次方） 的值。 pow(x,-0.5) 表示 x 的 -0.5 次方,即x的标准差的倒数
         # self.wih = numpy.random.rand(self.hidden_nodes, self.input_nodes) - 0.5
+        # 权重设置根据输入节点数量和隐藏节点数量的平方根倒数
         self.wih = numpy.random.normal(0.0, pow(self.hidden_nodes, -0.5), (self.hidden_nodes, self.input_nodes))
         # 隐藏层到输出层的权重
         # self.who = numpy.random.rand(self.output_nodes, self.hidden_nodes) - 0.5

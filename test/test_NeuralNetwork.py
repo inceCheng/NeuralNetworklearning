@@ -6,7 +6,7 @@ from train.train_NeuralNetwork import *
 # 输入节点784 28*28
 input_nodes = 784
 # 隐藏节点500
-hidden_nodes = 500
+hidden_nodes = 300
 # 输出节点10
 output_nodes = 10
 MODEL_DIR = '../models'
